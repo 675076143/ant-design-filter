@@ -21,10 +21,7 @@ const Filter: FunctionComponent<FilterProps> = (props) => {
   const [form] = Form.useForm();
   const { getFieldValue } = form;
   const [items, setItems] = useState(
-    propItems
-      ?.filter((i) => i.visible === undefined || i.visible)
-      ?.map((i) => ({ ...i, selected: false, value: null, editing: false })) ??
-      []
+    propItems?.filter((i) => i.visible === undefined || i.visible) ?? []
   );
   const [currentEditItemIndex, setCurrentEditItemIndex] = useState(-1);
   const [optionsForAutoComplate, setOptionsForAutoComplate] = useState({

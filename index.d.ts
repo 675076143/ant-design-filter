@@ -7,13 +7,15 @@ export type FilterInstance = {
 export type FilterItemType = "Input" | "Search" | "Select" | "AutoComplete";
 
 export type FilterItem = {
-  key?: string;
+  key: string;
   type: FilterItemType;
   title?: string;
   placeholder?: string;
   visible?: boolean;
   options?: [];
-  selected?: boolean
+  selected?: boolean,
+  value?: string | [] | null,
+  editing?: boolean
 }
 
 export interface FilterProps {
